@@ -1,6 +1,6 @@
 # Sobre o Projeto
 
-Este é projeto de um pacote Python capaz de treinar um classificador CNN(Convolutional Neural Network) de imagens.
+Este é projeto de um pacote Python capaz de treinar um classificador CNN(Convolutional Neural Network) de imagens do zero ou através de Fine Tunning.
 
 # Obtenção de Imagens
 
