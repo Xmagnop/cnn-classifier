@@ -65,9 +65,22 @@ Este comando irá exportar o modelo treinado para `tmp/fine_tunel_model`.
 
 `poetry run predict`
 
-Este comando irá classificar as imagens geradas na pasta `predict_imgs`, printando os resultados a exemplo do visto abaixo.
+Este comando irá classificar as imagens geradas na pasta `predict_imgs`, printando os resultados e métricas a exemplo do visto abaixo, além de gráficos para melhor visualização.
 
 ```
+Acurácia: 0.9
+F1 Score: 0.898989898989899
+
+Relatório de Classificação:
+               precision    recall  f1-score   support
+
+     chuvoso       0.83      1.00      0.91         5
+  ensolarado       1.00      0.80      0.89         5
+
+    accuracy                           0.90        10
+   macro avg       0.92      0.90      0.90        10
+weighted avg       0.92      0.90      0.90        10
+
 chuvoso_4.jpg: chuvoso (99.98%)
 ensolarado_3.jpg: chuvoso (58.72%)
 chuvoso_5.jpg: chuvoso (99.98%)
