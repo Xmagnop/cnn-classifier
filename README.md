@@ -33,7 +33,7 @@ test_model = "fine_tunel_model"
 * `fine_tune_num_layers`: Número de camadas que serão descongeladas e treinadas no treinamento usando *transfer learning*
 * `test_model`: Modelo que será usado na predição. Pode ser `model` para o modelo treinado do zero ou `fine_tune_model` para o modelo treinado usando *transfer learning*
 
-As imagens de treinamento devem ser salvas na pasta `imgs`. Esta pasta deve conter subpastas que por sua vez conterão as imagens. O nome de cada subpasta irá representar o nome da classe das imagens contidas nela. Por padrão, a pasta `imgs` contem as subpastas `daisy`, `rose` e `rapeseed`, contendo imagens de flores das respectivas classes.
+As imagens de treinamento devem ser salvas na pasta `imgs`. Esta pasta deve conter subpastas que por sua vez conterão as imagens. O nome de cada subpasta irá representar o nome da classe das imagens contidas nela. Neste projeto, a pasta `imgs` contem as subpastas `ensolarado` e `chuvoso`, contendo imagens do céu nestes respectivos climas.
 
 A pasta `predict_imgs` deve conter imagens definidas pelo usuário que serão usadas para testar o modelo pronto. Por padrão, esta pasta contém imagens de flores dos tipos `daisy`(margaridas), `rose`(rosas) e `rapeseed`(colzas).
 
@@ -53,7 +53,7 @@ Este comando irá gerar a pasta `tmp` contendo as imagens pré-processadas.
 
 `poetry run train`
 
-Este comando irá exportar o modelo treinado para `tmp/model`.
+Este comando irá realizar o treinamento e ao fim fazer o plot das métricas obtidas durante o treinamento e validação. Após isto, irá exportar o modelo treinado para `tmp/model`.
 
 OU
 
@@ -63,27 +63,19 @@ Este comando irá exportar o modelo treinado para `tmp/fine_tunel_model`.
 
 ## Classificando Imagens
 
-`poetry run classify`
+`poetry run predict`
 
 Este comando irá classificar as imagens geradas na pasta `predict_imgs`, printando os resultados a exemplo do visto abaixo.
 
 ```
-daisy1.png: daisy
-daisy2.png: daisy
-daisy3.png: daisy
-daisy4.png: daisy
-daisy5.png: daisy
-daisy6.png: daisy
-rapeseed1.png: rapeseed
-rapeseed2.png: rapeseed
-rapeseed3.png: rapeseed
-rapeseed4.png: daisy
-rapeseed5.png: rapeseed
-rapeseed6.png: daisy
-rose1.png: rose
-rose2.png: rose
-rose3.png: rose
-rose4.png: rose
-rose5.png: rose
-rose6.png: rose
+chuvoso_4.jpg: chuvoso (99.98%)
+ensolarado_3.jpg: chuvoso (58.72%)
+chuvoso_5.jpg: chuvoso (99.98%)
+ensolarado_5.jpg: ensolarado (94.27%)
+ensolarado_4.jpg: ensolarado (98.01%)
+ensolarado_2.jpg: ensolarado (99.68%)
+chuvoso_1.jpg: chuvoso (99.88%)
+ensolarado_1.jpg: ensolarado (98.55%)
+chuvoso_2.jpg: chuvoso (99.88%)
+chuvoso_3.jpg: chuvoso (99.91%)
 ```
