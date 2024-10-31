@@ -35,7 +35,7 @@ test_model = "fine_tunel_model"
 
 As imagens de treinamento devem ser salvas na pasta `imgs`. Esta pasta deve conter subpastas que por sua vez conterão as imagens. O nome de cada subpasta irá representar o nome da classe das imagens contidas nela. Neste projeto, a pasta `imgs` contem as subpastas `ensolarado` e `chuvoso`, contendo imagens do céu nestes respectivos climas.
 
-A pasta `predict_imgs` deve conter imagens definidas pelo usuário que serão usadas para testar o modelo pronto. Por padrão, esta pasta contém imagens de flores dos tipos `daisy`(margaridas), `rose`(rosas) e `rapeseed`(colzas).
+A pasta `predict_imgs` deve conter imagens definidas pelo usuário que serão usadas para testar o modelo pronto.
 
 # Executando o Código
 
